@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ben Siran - IELTS Speaking Hack</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #c41e3a;
+            --primary-foreground: #ffffff;
+            --background: #1a1a1a;
+            --foreground: #d9d9d9;
+            --card: #2d2d2d;
+            --card-foreground: #d9d9d9;
+            --border: #404040;
+            --muted-foreground: #999999;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid var(--border);
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            max-width: 448px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        .header-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .header-btn:hover {
+            color: #a01830;
+        }
+
+        main {
+            max-width: 448px;
+            margin: 0 auto;
+            padding-bottom: 3rem;
+        }
+
+        .founder-photo {
+            width: 100%;
+            height: 20rem;
+            background-color: var(--card);
+            overflow: hidden;
+        }
+
+        .founder-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .title-section {
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        .title-section h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .title-section .subtitle {
+            font-size: 1.125rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .title-section .tagline {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            margin-top: 0.5rem;
+        }
+
+        .card {
+            background-color: var(--card);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .education-item {
+            margin-bottom: 0.75rem;
+        }
+
+        .education-item .degree {
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .education-item .university {
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: rgba(217, 217, 217, 0.1);
+            border: 1px solid var(--border);
+            border-radius: 0.375rem;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .experience-item {
+            margin-bottom: 1rem;
+        }
+
+        .experience-item .position {
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .experience-item .company {
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+        }
+
+        .experience-item .description {
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .mission-card {
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.2) 0%, rgba(196, 30, 58, 0.1) 100%);
+            border: 1px solid rgba(196, 30, 58, 0.3);
+        }
+
+        .cta-section {
+            text-align: center;
+        }
+
+        .cta-section p {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            margin-bottom: 0.75rem;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-primary:hover {
+            background-color: #a01830;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--foreground);
+            border: 1px solid var(--border);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(217, 217, 217, 0.1);
+        }
+
+        .back-btn {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="1000075345.png" alt="Logo" class="logo" onclick="window.location.href='ielts_speaking_hack.html'">
+                <h1>About the Founder</h1>
+            </div>
+            <button class="header-btn" onclick="window.location.href='ielts_speaking_hack.html'">← Back</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Founder Photo -->
+        <div class="founder-photo">
+            <img src="1000074665.jpg" alt="Ben Siran - Founder">
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Title Section -->
+            <div class="title-section">
+                <h2>Ben Siran</h2>
+                <p class="subtitle">Founder of Ben Siran Academy</p>
+                <p class="tagline">IELTS Expert & English Education Pioneer</p>
+            </div>
+
+            <!-- Professional Summary -->
+            <div class="card">
+                <h3>Professional Summary</h3>
+                <p>University professor and certified mentor with over 10 years of experience in English education, international test preparation (IELTS, TOEFL, CAE, CPE, PTE, GRE), and academic leadership. Ben Siran is a visionary educator who has transformed the lives of thousands of students through innovative teaching methods and comprehensive exam preparation strategies.</p>
+            </div>
+
+            <!-- Education -->
+            <div class="card">
+                <h3>Education</h3>
+                <div class="education-item">
+                    <div class="degree">MA in Teaching English as a Foreign Language (TEFL)</div>
+                    <div class="university">Imam Reza International University, Mashhad, Iran</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">BA in English Translation Studies</div>
+                    <div class="university">Imam Reza International University, Mashhad, Iran</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Diploma in Graphic Design</div>
+                    <div class="university">Ershad Fine Arts School</div>
+                </div>
+            </div>
+
+            <!-- Key Expertise -->
+            <div class="card">
+                <h3>Areas of Expertise</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">IELTS Instruction</div>
+                    <div class="skill-tag">TOEFL Preparation</div>
+                    <div class="skill-tag">Test Design & Evaluation</div>
+                    <div class="skill-tag">Curriculum Development</div>
+                    <div class="skill-tag">Teacher Training</div>
+                    <div class="skill-tag">Academic Writing</div>
+                    <div class="skill-tag">Public Speaking</div>
+                    <div class="skill-tag">Language Acquisition</div>
+                    <div class="skill-tag">University Teaching</div>
+                    <div class="skill-tag">Content Creation</div>
+                    <div class="skill-tag">Digital Platforms</div>
+                    <div class="skill-tag">Branding & Strategy</div>
+                </div>
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="card">
+                <h3>Professional Experience</h3>
+                <div class="experience-item">
+                    <div class="position">Senior Content Creator, Designer & Head of CRM</div>
+                    <div class="company">Golden Saffron Holding | 2023 – Present</div>
+                    <div class="description">Led content creation for branding initiatives, resulting in 15% increase in brand engagement within six months.</div>
+                </div>
+                <div class="experience-item">
+                    <div class="position">University Teacher (English Language Courses)</div>
+                    <div class="company">Changchun University of Technology and Engineering, China | 2022 – Present</div>
+                    <div class="description">Teaching spoken English courses and advanced English programs internationally.</div>
+                </div>
+                <div class="experience-item">
+                    <div class="position">University Lecturer</div>
+                    <div class="company">Attar University of Mashhad, Iran | 2021 – 2023</div>
+                    <div class="description">Taught testing, oral English, IELTS preparation, and panel discussions for advanced students.</div>
+                </div>
+                <div class="experience-item">
+                    <div class="position">IELTS Instructor & Educational Manager</div>
+                    <div class="company">Multiple Language Institutions | 2015 – 2021</div>
+                    <div class="description">Designed curricula, conducted mock IELTS tests, trained teachers, and managed language centers across Iran.</div>
+                </div>
+                <div class="experience-item">
+                    <div class="position">Founder & Editor</div>
+                    <div class="company">english-learners.com | 2010 – 2014</div>
+                    <div class="description">Designed content for one of the first EFL websites in Iran, attracting over 50,000 unique visitors annually with 15% year-over-year growth.</div>
+                </div>
+            </div>
+
+            <!-- Mission Statement -->
+            <div class="card mission-card">
+                <h3>Our Mission</h3>
+                <p>Ben Siran Academy is dedicated to empowering students worldwide to master English communication and excel in international examinations. Through innovative teaching methods, personalized guidance, and comprehensive resources, we transform language learning into a journey of confidence and success.</p>
+            </div>
+
+            <!-- Contact -->
+            <div class="card cta-section">
+                <p>Ready to start your IELTS Speaking journey?</p>
+                <button class="btn btn-primary" onclick="window.open('https://t.me/bensiranacademy', '_blank')">
+                    Join Ben Siran Academy
+                </button>
+            </div>
+
+            <!-- Back Button -->
+            <button class="btn btn-outline back-btn" onclick="window.location.href='ielts_speaking_hack.html'">
+                ← Back to Home
+            </button>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Speaking Hack - Official Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #c41e3a;
+            --primary-foreground: #ffffff;
+            --background: #1a1a1a;
+            --foreground: #d9d9d9;
+            --card: #2d2d2d;
+            --card-foreground: #d9d9d9;
+            --border: #404040;
+            --muted-foreground: #999999;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid var(--border);
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            max-width: 448px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.25rem;
+        }
+
+        h1 {
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        main {
+            max-width: 448px;
+            margin: 0 auto;
+            padding-bottom: 6rem;
+        }
+
+        .hero {
+            position: relative;
+            height: 16rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/1000075865.jpg');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .microphone {
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto 1rem;
+            border-radius: 9999px;
+            border: 4px solid var(--primary);
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+        }
+
+        .hero-accent {
+            color: var(--primary);
+        }
+
+        .content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .card {
+            background-color: var(--card);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+
+        .card-header h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .chevron {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .session-btn {
+            background-color: rgba(217, 217, 217, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--foreground);
+            font-size: 0.875rem;
+        }
+
+        .session-btn:hover {
+            background-color: rgba(196, 30, 58, 0.2);
+        }
+
+        .session-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .session-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .session-subtitle {
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+        }
+
+        .progress-section {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .progress-label {
+            color: var(--muted-foreground);
+        }
+
+        .progress-value {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: rgba(217, 217, 217, 0.1);
+            border-radius: 9999px;
+            height: 0.5rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background-color: var(--primary);
+            height: 100%;
+            width: 63%;
+        }
+
+        .enroll-btn {
+            width: 100%;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border: none;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .enroll-btn:hover {
+            background-color: #a01830;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.2s;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: var(--card);
+            width: 100%;
+            max-width: 448px;
+            border-radius: 0.75rem 0.75rem 0 0;
+            padding: 1.5rem;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+
+        .modal-header {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--foreground);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-description {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            margin-bottom: 1rem;
+        }
+
+        .vocab-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--muted-foreground);
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .vocab-item {
+            background-color: rgba(217, 217, 217, 0.1);
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            border: 1px solid var(--border);
+            margin-bottom: 0.5rem;
+        }
+
+        .vocab-word {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--primary);
+        }
+
+        .vocab-pos {
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+        }
+
+        .vocab-meaning {
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .question-item {
+            background-color: rgba(217, 217, 217, 0.1);
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            border: 1px solid var(--border);
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .question-item:hover {
+            background-color: rgba(196, 30, 58, 0.2);
+        }
+
+        .question-text {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .answer-text {
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .timer-display {
+            font-size: 3.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            main {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="1000075345.png" alt="Logo" class="logo">
+            <h1>IELTS Speaking Hack</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="microphone">🎤</div>
+                <h2>IELTS SPEAKING <span class="hero-accent">HACK</span></h2>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Practice Sessions -->
+            <div class="card">
+                <div class="card-header" onclick="toggleSection('practice')">
+                    <h3>Practice Sessions</h3>
+                    <span class="chevron" id="practice-chevron">▲</span>
+                </div>
+                <div id="practice-content" class="grid-2">
+                    <button class="session-btn" onclick="openModal('part1')">
+                        <div class="session-icon">📖</div>
+                        <div class="session-title">Part 1</div>
+                        <div class="session-subtitle">12 Sessions</div>
+                    </button>
+                    <button class="session-btn" onclick="openModal('part2')">
+                        <div class="session-icon">🎤</div>
+                        <div class="session-title">Part 2</div>
+                        <div class="session-subtitle">8 Sessions</div>
+                    </button>
+                    <button class="session-btn" onclick="openModal('part3')">
+                        <div class="session-icon">💬</div>
+                        <div class="session-title">Part 3</div>
+                        <div class="session-subtitle">10 Sessions</div>
+                    </button>
+                    <button class="session-btn" onclick="openModal('vocab')">
+                        <div class="session-icon">📚</div>
+                        <div class="session-title">Vocabulary</div>
+                        <div class="session-subtitle">Bank</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress Tracker -->
+            <div class="card">
+                <div class="card-header" onclick="toggleSection('progress')">
+                    <h3>Progress Tracker</h3>
+                    <span class="chevron" id="progress-chevron">▲</span>
+                </div>
+                <div id="progress-content">
+                    <div class="progress-section">
+                        <span class="progress-label">Sessions Complete</span>
+                        <span class="progress-value">19/30</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Practice -->
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Quick Practice</h3>
+                <div class="grid-2">
+                    <button class="session-btn" onclick="openModal('exercises')">
+                        <div class="session-icon">✍️</div>
+                        <div class="session-title">Speaking</div>
+                        <div class="session-subtitle">Exercises</div>
+                    </button>
+                    <button class="session-btn" onclick="openModal('timer')">
+                        <div class="session-icon">⏱️</div>
+                        <div class="session-title">Timed</div>
+                        <div class="session-subtitle">Practice</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Enroll Button -->
+            <button class="enroll-btn" onclick="window.open('https://t.me/bensiranacademy', '_blank')">
+                ENROLL Now
+            </button>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <!-- Part 1 Modal -->
+    <div id="part1-modal" class="modal" onclick="closeModal('part1')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                Part 1: Introduction & Interview
+                <button class="close-btn" onclick="closeModal('part1')">✕</button>
+            </div>
+            <p class="modal-description">Part 1 lasts 4-5 minutes. The examiner will ask general questions about yourself and familiar topics.</p>
+            <h4 style="font-weight: 600; color: var(--primary); margin: 1rem 0 0.5rem;">🏠 Home & Accommodation</h4>
+            <div class="question-item" onclick="toggleAnswer(this)">
+                <div class="question-text">Do you live in a house or an apartment?</div>
+                <div class="answer-text hidden">I currently live in a spacious apartment on the outskirts of the city. It's a modern two-bedroom flat that I share with my roommate.</div>
+            </div>
+            <div class="question-item" onclick="toggleAnswer(this)">
+                <div class="question-text">What's your favorite room in your home?</div>
+                <div class="answer-text hidden">My favorite room would definitely be the living room. It's where I spend most of my leisure time, whether I'm reading, watching movies, or entertaining guests.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Part 2 Modal -->
+    <div id="part2-modal" class="modal" onclick="closeModal('part2')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                Part 2: Individual Long Turn
+                <button class="close-btn" onclick="closeModal('part2')">✕</button>
+            </div>
+            <p class="modal-description">Part 2 lasts 3-4 minutes. You'll receive a task card and have 1 minute to prepare, then speak for 2 minutes.</p>
+            <h4 style="font-weight: 600; color: var(--primary); margin: 1rem 0 0.5rem;">🎯 Cue Card Topic 1</h4>
+            <div class="question-item" onclick="toggleAnswer(this)">
+                <div class="question-text">Describe a person who has influenced you</div>
+                <div class="answer-text hidden">I'd like to talk about my high school mathematics teacher, Mrs. Patterson, who has had a profound influence on my life and career path.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Part 3 Modal -->
+    <div id="part3-modal" class="modal" onclick="closeModal('part3')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                Part 3: Discussion
+                <button class="close-btn" onclick="closeModal('part3')">✕</button>
+            </div>
+            <p class="modal-description">Part 3 lasts 4-5 minutes and discusses abstract ideas related to the Part 2 topic.</p>
+            <h4 style="font-weight: 600; color: var(--primary); margin: 1rem 0 0.5rem;">💡 General Questions about Influence</h4>
+            <div class="question-item" onclick="toggleAnswer(this)">
+                <div class="question-text">How important are role models in society today?</div>
+                <div class="answer-text hidden">Role models are arguably more crucial now than ever. In a world saturated with information and rapidly changing values, having figures who embody positive attributes gives younger generations a tangible benchmark for success.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vocabulary Modal -->
+    <div id="vocab-modal" class="modal" onclick="closeModal('vocab')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                📚 Vocabulary Bank
+                <button class="close-btn" onclick="closeModal('vocab')">✕</button>
+            </div>
+            <div class="vocab-tabs">
+                <button class="tab-btn active" onclick="switchTab('art')">Art</button>
+                <button class="tab-btn" onclick="switchTab('tech')">Tech</button>
+                <button class="tab-btn" onclick="switchTab('env')">Env</button>
+            </div>
+            <div id="art-tab" class="vocab-content">
+                <div class="vocab-item"><div class="vocab-word">Work of art</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A painting, sculpture, book, play, piece of music, or other product of the creative or fine arts.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Aesthetic qualities</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The qualities related to beauty and understanding the beauty of something.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Art movement</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A group of artists who share similar ideas, such as Impressionists or Romantics.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Express oneself</div><div class="vocab-pos">verb</div><div class="vocab-meaning">To communicate ideas or emotions through speech, writing, painting, music, or other forms of art.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Literary fiction</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Types of literature that describe imaginary people and events, rather than real ones.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Performing arts</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Forms of creative activity performed in front of an audience, such as drama, music, and dance.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Surrealism</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A 20th-century avant-garde movement that strives to release creativity through the irrational juxtaposition of images.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Classical music</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Music considered part of a long, formal tradition and of lasting value, such as works by Mozart or Bach.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Creative</div><div class="vocab-pos">adj</div><div class="vocab-meaning">Relating to or involving the imagination or original ideas, especially in artistic work.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Artist</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A person who creates paintings, sculptures, or other forms of visual art.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Master</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A highly skilled and renowned artist, often from historical periods.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Amateur</div><div class="vocab-pos">adj/noun</div><div class="vocab-meaning">A person who engages in art as a hobby without professional training or payment.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Sculptor</div><div class="vocab-pos">noun</div><div class="vocab-meaning">An artist who creates three-dimensional works by shaping materials like stone or metal.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Graphic designer</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A professional who creates visual designs using digital or traditional tools.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Art collector</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A person who acquires and maintains a collection of artworks.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Artistic</div><div class="vocab-pos">adj</div><div class="vocab-meaning">Having or revealing natural creative skill or talent in the arts.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Passion</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A strong enthusiasm or dedication toward drama, music, or other artistic pursuits.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Appreciate art</div><div class="vocab-pos">verb</div><div class="vocab-meaning">To understand, value, and enjoy artistic works.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Philistine</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A person who is indifferent or hostile to art and culture.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Modern art</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Art marked by a departure from traditional styles, particularly from the late 19th to late 20th centuries.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Visual arts</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Forms of art that are primarily visual, such as painting, drawing, or sculpture.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Avant-garde</div><div class="vocab-pos">adj/noun</div><div class="vocab-meaning">Innovative or experimental ideas and works in the arts, often ahead of mainstream trends.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Renaissance</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A period of renewed interest in art and learning, especially in Europe during the 14th to 17th centuries.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Impressionist</div><div class="vocab-pos">noun/adj</div><div class="vocab-meaning">An artist or style focused on capturing light and natural forms rather than precise details.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Romantic</div><div class="vocab-pos">adj/noun</div><div class="vocab-meaning">An artistic movement emphasizing emotion, individualism, and nature.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Modernist</div><div class="vocab-pos">noun/adj</div><div class="vocab-meaning">Relating to a movement that rejected traditional forms in favor of abstraction and innovation.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Imagination</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The ability to form new ideas or images not present to the senses, essential for artistic creation.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Inspiration</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A sudden brilliant or timely idea that stimulates creative activity.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Masterpiece</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A work of outstanding artistry, skill, or workmanship.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Palette</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A range of colors used by an artist or the board on which colors are mixed.</div></div>
+            </div>
+            <div id="tech-tab" class="vocab-content hidden">
+                <div class="vocab-item"><div class="vocab-word">Cutting-edge</div><div class="vocab-pos">adj</div><div class="vocab-meaning">Highly advanced or innovative, representing the latest developments.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Desktop PC</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A personal computer designed to be used on a desk or table.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Geek</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A person who is enthusiastic and knowledgeable about technology, especially computers.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Hold the line</div><div class="vocab-pos">verb phrase</div><div class="vocab-meaning">To wait briefly during a phone call.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Large screen</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A big-sized monitor or display for computers or devices.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Essential</div><div class="vocab-pos">adj</div><div class="vocab-meaning">Absolutely necessary, such as a piece of technology one cannot live without.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Breakthrough</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A major discovery or development in technology.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Widespread use</div><div class="vocab-pos">noun phrase</div><div class="vocab-meaning">The common adoption of technology in daily life.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Rapid pace</div><div class="vocab-pos">noun phrase</div><div class="vocab-meaning">The fast rate of change or development in technology.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Labour-saving devices</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Tools or machines that reduce the amount of work required.</div></div>
+                <div class="vocab-item"><div class="vocab-word">State of the art</div><div class="vocab-pos">adj</div><div class="vocab-meaning">Using the latest and most advanced technology available.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Emerging technology</div><div class="vocab-pos">noun</div><div class="vocab-meaning">New innovations that have the potential to transform industries or daily life.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Artificial intelligence</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The simulation of human intelligence processes by machines.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Obsolete</div><div class="vocab-pos">adj</div><div class="vocab-meaning">Outdated or no longer in use due to newer advancements.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Throw-away society</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A culture where products are discarded after short use rather than repaired.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Hacking</div><div class="vocab-pos">noun/verb</div><div class="vocab-meaning">Unauthorized access to computer systems or data.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Carbon footprint</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The total amount of greenhouse gases produced by an individual or device.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Gadget</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A small mechanical or electronic device with a practical use.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Surf the net</div><div class="vocab-pos">verb phrase</div><div class="vocab-meaning">To browse the internet.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Renew</div><div class="vocab-pos">verb</div><div class="vocab-meaning">To update or replace technology with a newer version.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Security</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Measures to protect against threats in digital systems.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Adapt</div><div class="vocab-pos">verb</div><div class="vocab-meaning">To adjust to new technological changes.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Innovation</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The introduction of new methods or devices.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Digital</div><div class="vocab-pos">adj</div><div class="vocab-meaning">Relating to electronic technology that generates, stores, and processes data.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Network</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A group of interconnected computers or devices.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Software</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Programs and operating information used by a computer.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Hardware</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The physical components of a computer system.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Cloud computing</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The delivery of computing services over the internet.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Cybersecurity</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Protection of internet-connected systems from cyberattacks.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Automation</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The use of technology to perform tasks without human intervention.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Virtual reality</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A simulated experience created by computer technology.</div></div>
+            </div>
+            <div id="env-tab" class="vocab-content hidden">
+                <div class="vocab-item"><div class="vocab-word">Natural environment</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The place where animals and plants are normally found in nature.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Pressure group</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A group that raises awareness and influences opinions on environmental issues.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Toxic waste</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Poisonous rubbish often produced by industrial processes.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Wildlife conservation</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The protection of animals, plants, and their habitats.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Environmentally friendly</div><div class="vocab-pos">adj</div><div class="vocab-meaning">Products or practices that do not harm the environment.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Natural disaster</div><div class="vocab-pos">noun</div><div class="vocab-meaning">An event like an earthquake or hurricane caused by nature.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Contamination</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The presence of harmful substances in a place where they do not belong.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Energy conservation</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The process of using less energy to reduce waste.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Environmental hazard</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A substance, state, or event that threatens the natural surroundings.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Flood</div><div class="vocab-pos">noun</div><div class="vocab-meaning">An overflow of water onto normally dry land.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Ecosystem</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A biological community of interacting organisms and their physical environment.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Biodiversity</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The variety of plant and animal life in a particular habitat.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Climate change</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Long-term alteration of temperature and typical weather patterns.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Global warming</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The gradual increase in Earth's average temperature due to greenhouse gases.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Deforestation</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The removal of forests or trees for non-forest use.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Pollution</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The introduction of harmful substances into the environment.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Sustainable</div><div class="vocab-pos">adj</div><div class="vocab-meaning">Able to be maintained at a certain rate or level without depleting resources.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Renewable energy</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Energy from sources that are naturally replenishing, like solar or wind.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Greenhouse effect</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The trapping of the sun's warmth in the planet's lower atmosphere.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Ozone layer</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A region of Earth's stratosphere that absorbs most of the sun's ultraviolet radiation.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Endangered species</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Animals or plants at risk of extinction.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Habitat</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The natural home or environment of an animal, plant, or organism.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Recycling</div><div class="vocab-pos">noun/verb</div><div class="vocab-meaning">The process of converting waste into reusable material.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Carbon footprint</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The amount of carbon dioxide released into the atmosphere by a person's activities.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Acid rain</div><div class="vocab-pos">noun</div><div class="vocab-meaning">Rainfall made acidic by atmospheric pollution.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Drought</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A prolonged period of abnormally low rainfall leading to water shortage.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Overpopulation</div><div class="vocab-pos">noun</div><div class="vocab-meaning">A situation where the number of people exceeds the environment's capacity.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Poaching</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The illegal hunting or capturing of wild animals.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Marine ecosystem</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The community of organisms and environment in oceans or seas.</div></div>
+                <div class="vocab-item"><div class="vocab-word">Preservation</div><div class="vocab-pos">noun</div><div class="vocab-meaning">The act of maintaining something in its original state, such as nature.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exercises Modal -->
+    <div id="exercises-modal" class="modal" onclick="closeModal('exercises')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                ✍️ Speaking Exercises
+                <button class="close-btn" onclick="closeModal('exercises')">✕</button>
+            </div>
+            <p class="modal-description">Complete the sentence using the most appropriate cohesive device:</p>
+            <p style="font-weight: 500; margin: 1rem 0;">"I enjoy painting landscapes, ___________ I sometimes find abstract art confusing."</p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <button class="question-item">A. Moreover</button>
+                <button class="question-item">B. However</button>
+                <button class="question-item">C. Therefore</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timer Modal -->
+    <div id="timer-modal" class="modal" onclick="closeModal('timer')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                ⏱️ Timed Practice
+                <button class="close-btn" onclick="closeModal('timer')">✕</button>
+            </div>
+            <div class="timer-display" id="timer-display">02:00</div>
+            <button class="enroll-btn" onclick="toggleTimer()">Start 2-Minute Speech</button>
+        </div>
+    </div>
+
+    <script>
+        let timerSeconds = 120;
+        let timerInterval = null;
+
+        function openModal(modalName) {
+            document.getElementById(modalName + '-modal').classList.add('active');
+        }
+
+        function closeModal(modalName) {
+            document.getElementById(modalName + '-modal').classList.remove('active');
+        }
+
+        function toggleSection(section) {
+            const content = document.getElementById(section + '-content');
+            const chevron = document.getElementById(section + '-chevron');
+            content.style.display = content.style.display === 'none' ? 'grid' : 'none';
+            chevron.textContent = content.style.display === 'none' ? '▼' : '▲';
+        }
+
+        function toggleAnswer(element) {
+            const answer = element.querySelector('.answer-text');
+            answer.classList.toggle('hidden');
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.vocab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+            event.target.classList.add('active');
+        }
+
+        function toggleTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+                document.querySelector('#timer-modal .enroll-btn').textContent = 'Start 2-Minute Speech';
+            } else {
+                document.querySelector('#timer-modal .enroll-btn').textContent = 'Pause Timer';
+                timerInterval = setInterval(() => {
+                    timerSeconds--;
+                    const mins = Math.floor(timerSeconds / 60);
+                    const secs = timerSeconds % 60;
+                    document.getElementById('timer-display').textContent = 
+                        `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+                    if (timerSeconds <= 0) {
+                        clearInterval(timerInterval);
+                        timerInterval = null;
+                        timerSeconds = 120;
+                        document.querySelector('#timer-modal .enroll-btn').textContent = 'Start 2-Minute Speech';
+                    }
+                }, 1000);
+            }
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
