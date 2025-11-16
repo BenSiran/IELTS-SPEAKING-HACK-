@@ -724,3 +724,1037 @@
                             <p>I first met Mrs. Patterson when I was 15 years old and struggling with advanced mathematics. Unlike other teachers, she didn't just teach formulas; she showed us the beauty and logic behind mathematical concepts. She had this incredible ability to break down complex problems into manageable steps and always encouraged us to think critically rather than memorize solutions.</p>
                             
                             <p>Her influence on me has been multifaceted. Academically, she transformed my relationship with mathematics from one of fear and confusion to genuine interest and confidence. She spent countless hours after school helping me and other students, never making us feel like we were a burden. But more importantly, she taught me the value of perseverance. Whenever I wanted to give up on a difficult problem, she'd say, "The struggle is where the learning happens."</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Speaking Hack</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .app-container {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background: #1a1a1a;
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        .header {
+            background: #000;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* NEW CSS FOR LOGO IMAGE */
+        .logo-img {
+            width: 30px; /* Adjust size as needed */
+            height: 30px;
+            border-radius: 5px; /* Optional, matches old style */
+            object-fit: cover;
+        }
+        
+        /* OLD LOGO CSS REMOVED: .logo-icon, .logo-bar */
+
+        .logo-text {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            
+            /* BACKGROUND IMAGE SOURCE ADDED */
+            background-image: url('[REPLACE_WITH_YOUR_HERO_BACKGROUND_IMAGE_URL]'); 
+            background-size: cover; 
+            background-position: center;
+            background-color: #0f0f0f; /* Fallback color */
+        }
+
+        .mic-circle {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            background: #000;
+            border: 4px solid #ff1744;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(255, 23, 68, 0); }
+        }
+
+        .mic-icon {
+            width: 60px;
+            height: 80px;
+            background: #fff;
+            border-radius: 30px 30px 0 0;
+            position: relative;
+        }
+
+        .mic-icon::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            border: 4px solid #fff;
+            border-top: none;
+            border-radius: 0 0 30px 30px;
+            bottom: -35px;
+            left: 0;
+            background: transparent;
+        }
+
+        .mic-icon::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 15px;
+            background: #fff;
+            bottom: -50px;
+            left: 28px;
+        }
+
+        .mic-bars {
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            top: 45px;
+        }
+
+        .bar {
+            width: 3px;
+            height: 15px;
+            background: #000;
+            border-radius: 2px;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            /* Optional: Add text-shadow for contrast against image background */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
+        }
+
+        .hero-title .hack {
+            color: #ff1744;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            background: #262626;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .arrow.rotated {
+            transform: rotate(180deg);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #222;
+            border-color: #ff1744;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff1744;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .progress-section {
+            background: #262626;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff1744, #ff5252);
+            width: 65%;
+            transition: width 0.3s;
+        }
+
+        .cta-button {
+            width: 100%;
+            background: linear-gradient(135deg, #ff1744, #ff5252);
+            border: none;
+            border-radius: 50px;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            background: #000;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: 1px solid #333;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.2s;
+            flex: 1;
+            padding: 5px;
+        }
+
+        .nav-item.active {
+            color: #ff1744;
+        }
+
+        .nav-icon {
+            font-size: 24px;
+        }
+
+        .nav-label {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ff1744;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #ff1744;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .part-section {
+            background: #262626;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .part-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff1744;
+            margin-bottom: 10px;
+        }
+
+        .question-item {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .question-item:hover {
+            background: #222;
+        }
+
+        .question-text {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .sample-answer {
+            display: none;
+            background: #0f0f0f;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+            border-left: 3px solid #ff1744;
+        }
+
+        .sample-answer.show {
+            display: block;
+        }
+
+        .sample-label {
+            color: #ff1744;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .vocab-category {
+            background: #262626;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .vocab-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff1744;
+            margin-bottom: 15px;
+        }
+
+        .vocab-item {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 8px;
+        }
+
+        .vocab-word {
+            font-weight: 600;
+            color: #ff5252;
+            margin-bottom: 5px;
+        }
+
+        .vocab-meaning {
+            font-size: 13px;
+            color: #ccc;
+        }
+
+        .exercise-section {
+            background: #262626;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .exercise-question {
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .option:hover {
+            background: #222;
+        }
+
+        .option.correct {
+            border-color: #4caf50;
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .option.wrong {
+            border-color: #f44336;
+            background: rgba(244, 67, 54, 0.1);
+        }
+
+        .timer {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ff1744;
+            margin: 30px 0;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: #262626;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .tab.active {
+            background: #ff1744;
+            border-color: #ff1744;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <div class="logo">
+                <img src="[REPLACE_WITH_YOUR_LOGO_IMAGE_URL]" alt="Ben Siran Academy Logo" class="logo-img">
+                <span class="logo-text">Ben Siran Academy</span>
+            </div>
+        </div>
+
+        <div id="homePage">
+            <div class="hero">
+                <div class="mic-circle">
+                    <div class="mic-icon">
+                        <div class="mic-bars">
+                            <div class="bar" style="height: 10px;"></div>
+                            <div class="bar" style="height: 18px;"></div>
+                            <div class="bar" style="height: 14px;"></div>
+                            <div class="bar" style="height: 20px;"></div>
+                            <div class="bar" style="height: 12px;"></div>
+                            <div class="bar" style="height: 16px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="hero-title">IELTS SPEAKING <span class="hack">HACK</span></h1>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <div class="section-header" id="practiceHeader">
+                        <h2 class="section-title">Practice Sessions</h2>
+                        <span class="arrow" id="practiceArrow">▼</span>
+                    </div>
+                    <div class="grid" id="practiceGrid">
+                        <div class="card" onclick="openModal('part1Modal')">
+                            <div class="card-icon">📖</div>
+                            <div class="card-title">Part 1<br>Sessions</div>
+                            <div class="badge">12</div>
+                        </div>
+                        <div class="card" onclick="openModal('part2Modal')">
+                            <div class="card-icon">🎤</div>
+                            <div class="card-title">Part 2<br>Sessions</div>
+                            <div class="badge">8</div>
+                        </div>
+                        <div class="card" onclick="openModal('part3Modal')">
+                            <div class="card-icon">💬</div>
+                            <div class="card-title">Part 3<br>Sessions</div>
+                            <div class="badge">10</div>
+                        </div>
+                        <div class="card" onclick="openModal('vocabModal')">
+                            <div class="card-icon">📚</div>
+                            <div class="card-title">Vocabulary<br>Bank</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <div class="section-header" id="progressHeader">
+                        <h2 class="section-title">Progress Tracker</h2>
+                        <span class="arrow" id="progressArrow">▼</span>
+                    </div>
+                    <div id="progressContent">
+                        <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+                            <span style="font-size: 14px; color: #888;">Sessions Complete</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #ff1744;">19/30</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">Quick Practice</h2>
+                    </div>
+                    <div class="grid">
+                        <div class="card" onclick="openModal('exercisesModal')">
+                            <div class="card-icon">✍️</div>
+                            <div class="card-title">Speaking<br>Exercises</div>
+                        </div>
+                        <div class="card" onclick="openModal('timerModal')">
+                            <div class="card-icon">⏱️</div>
+                            <div class="card-title">Timed<br>Practice</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="cta-button">Start Practice Now</button>
+            </div>
+        </div>
+
+        <div id="part1Modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Part 1: Introduction & Interview</h2>
+                    <button class="close-btn" onclick="closeModal('part1Modal')">×</button>
+                </div>
+                
+                <div class="part-section">
+                    <p style="margin-bottom: 15px; color: #ccc;">Part 1 lasts 4-5 minutes. The examiner will ask general questions about yourself and familiar topics.</p>
+                    
+                    <div class="part-title">🏠 Home & Accommodation</div>
+                    
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text"><strong>Q:</strong> Do you live in a house or an apartment?</div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER:</div>
+                            <p>I currently live in a spacious apartment on the outskirts of the city. It's a modern two-bedroom flat that I share with my roommate. What I particularly appreciate about it is the abundance of natural light, thanks to the large windows in the living room. The location is quite convenient as well, with easy access to public transportation and local amenities.</p>
+                        </div>
+                    </div>
+
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text"><strong>Q:</strong> What's your favorite room in your home?</div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER:</div>
+                            <p>My favorite room would definitely be the living room. It's where I spend most of my leisure time, whether I'm reading, watching movies, or entertaining guests. I've decorated it with comfortable furniture and some personal touches like family photos and plants, which create a warm and welcoming atmosphere. It's essentially the heart of my home.</p>
+                        </div>
+                    </div>
+
+                    <div class="part-title">🎓 Work & Studies</div>
+                    
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text"><strong>Q:</strong> What do you do? Do you work or study?</div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER:</div>
+                            <p>I'm currently pursuing a Bachelor's degree in Computer Science at the University. I'm in my third year now, and I'm thoroughly enjoying my studies. The program is quite challenging but incredibly rewarding, especially when working on practical projects. I'm particularly interested in artificial intelligence and machine learning, which I hope to specialize in.</p>
+                        </div>
+                    </div>
+
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text"><strong>Q:</strong> Why did you choose this field?</div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER:</div>
+                            <p>I chose computer science because I've always been fascinated by technology and its potential to solve real-world problems. Growing up, I enjoyed tinkering with computers and learning how things work. The field offers endless opportunities for innovation and creativity, which really appeals to me. Plus, the job prospects are excellent, which was certainly a practical consideration.</p>
+                        </div>
+                    </div>
+
+                    <div class="part-title">🏙️ Hometown</div>
+                    
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text"><strong>Q:</strong> Where are you from?</div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER:</div>
+                            <p>I'm from a mid-sized city in the northern part of the country. It's a vibrant place with a rich cultural heritage and a growing economy. The city has a perfect blend of modern infrastructure and historical landmarks, which makes it quite unique. I've lived there my entire life and have a deep connection to the place.</p>
+                        </div>
+                    </div>
+
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text"><strong>Q:</strong> What do you like most about your hometown?</div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER:</div>
+                            <p>What I appreciate most is the sense of community. Despite being a fairly large city, people maintain strong neighborhood connections and there's a genuine warmth among residents. The food scene is also exceptional – we have incredible street food and traditional restaurants. Additionally, the climate is pleasant year-round, which allows for outdoor activities in every season.</p>
+                        </div>
+                    </div>
+
+                    <div class="part-title">⏰ Daily Routine</div>
+                    
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text"><strong>Q:</strong> What's your typical daily routine?</div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER:</div>
+                            <p>My weekdays follow a fairly structured pattern. I usually wake up around 6:30 AM and start my day with some light exercise, followed by breakfast. Then I commute to university for my morning lectures. Afternoons are typically reserved for study sessions or part-time work at the library. Evenings are when I unwind – I might meet friends, work on personal projects, or simply relax at home. I try to maintain a regular sleep schedule and go to bed by 11 PM.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="part2Modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Part 2: Individual Long Turn</h2>
+                    <button class="close-btn" onclick="closeModal('part2Modal')">×</button>
+                </div>
+                
+                <div class="part-section">
+                    <p style="margin-bottom: 15px; color: #ccc;">Part 2 lasts 3-4 minutes. You'll receive a task card and have 1 minute to prepare, then speak for 2 minutes.</p>
+                    
+                    <div class="part-title">🎯 Cue Card Topic 1</div>
+                    
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text">
+                            <strong>Describe a person who has influenced you</strong><br><br>
+                            You should say:<br>
+                            • Who this person is<br>
+                            • How you know them<br>
+                            • What influence they have had on you<br>
+                            • And explain why this person is important to you
+                        </div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER (2 MINUTES):</div>
+                            <p>I'd like to talk about my high school mathematics teacher, Mrs. Patterson, who has had a profound influence on my life and career path.</p>
+                            
+                            <p>I first met Mrs. Patterson when I was 15 years old and struggling with advanced mathematics. Unlike other teachers, she didn't just teach formulas; she showed us the beauty and logic behind mathematical concepts. She had this incredible ability to break down complex problems into manageable steps and always encouraged us to think critically rather than memorize solutions.</p>
+                            
+                            <p>Her influence on me has been multifaceted. Academically, she transformed my relationship with mathematics from one of fear and confusion to genuine interest and confidence. She spent countless hours after school helping me and other students, never making us feel like we were a burden. But more importantly, she taught me the value of perseverance. Whenever I wanted to give up on a difficult problem, she'd say, "The struggle is where the learning happens."</p>
+                            
+                            <p>This mindset has stayed with me throughout my university studies and continues to guide me today. When I face challenges in my computer science courses, I hear her voice encouraging me to persist. She also inspired my interest in helping others learn, and I now volunteer as a tutor myself, trying to pass on the same patience and enthusiasm she showed me.</p>
+                            
+                            <p>Mrs. Patterson is important to me because she saw potential in me that I didn't see in myself. She believed in my abilities even when I doubted them, and that belief gave me the confidence to pursue a challenging field of study. She wasn't just a teacher; she was a mentor who genuinely cared about her students' success beyond the classroom.</p>
+                        </div>
+                    </div>
+
+                    <div class="part-title">🎯 Cue Card Topic 2</div>
+                    
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text">
+                            <strong>Describe a memorable journey you have made</strong><br><br>
+                            You should say:<br>
+                            • Where you went<br>
+                            • Who you went with<br>
+                            • What you did there<br>
+                            • And explain why this journey was memorable
+                        </div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER (2 MINUTES):</div>
+                            <p>I'd like to share my experience of a backpacking trip I took to the mountains last summer, which turned out to be one of the most memorable journeys of my life.</p>
+                            
+                            <p>My destination was a remote mountain region in the northern highlands, known for its pristine natural beauty and challenging hiking trails. I went with three close friends from university, all of whom shared my passion for outdoor adventures. We had been planning this trip for months, carefully researching routes and preparing our equipment.</p>
+                            
+                            <p>During our five-day expedition, we hiked through dense forests, crossed crystal-clear streams, and camped under star-filled skies. One of the highlights was reaching a summit at sunrise on our third day – the view was absolutely breathtaking, with clouds below us and snow-capped peaks stretching endlessly in every direction. We also encountered local villagers who were incredibly hospitable, sharing meals with us and telling stories about the region's history and wildlife.</p>
+                            
+                            <p>What made this journey particularly memorable was the combination of physical challenge and personal growth. There were moments when I doubted whether I could continue, especially during steep climbs with a heavy backpack. But pushing through these difficulties with the support of my friends taught me valuable lessons about resilience and teamwork. We had to rely on each other completely – whether it was navigating trails, setting up camp, or simply keeping spirits high when conditions were tough.</p>
+                            
+                            <p>This journey was transformative because it took me completely out of my comfort zone and away from the distractions of modern life. Without phone signal or internet, we were fully present in each moment. The experience deepened my friendships and gave me a profound appreciation for nature's beauty and power. Even now, months later, I find myself reflecting on that trip whenever I face challenges in daily life.</p>
+                        </div>
+                    </div>
+
+                    <div class="part-title">🎯 Cue Card Topic 3</div>
+                    
+                    <div class="question-item" onclick="toggleAnswer(this)">
+                        <div class="question-text">
+                            <strong>Describe a skill you would like to learn</strong><br><br>
+                            You should say:<br>
+                            • What the skill is<br>
+                            • Why you want to learn it<br>
+                            • How you plan to learn it<br>
+                            • And explain how this skill would benefit you
+                        </div>
+                        <div class="sample-answer">
+                            <div class="sample-label">SAMPLE ANSWER (2 MINUTES):</div>
+                            <p>The skill I'm really eager to learn is playing the piano. It's something I've been fascinated by for years but never had the opportunity to pursue properly.</p>
+                            
+                            <p>My interest in piano began when I attended a classical music concert a few years ago. Watching the pianist's fingers dance across the keys while creating such beautiful, complex melodies was mesmerizing. Since then, I've realized that learning piano isn't just about music – it's about discipline, coordination, and expressing emotions in a unique way. I'm also drawn to the cognitive benefits; research shows that playing piano enhances memory, concentration, and multitasking abilities.</p>
+                            
+                            <p>As for my learning plan, I've already started doing some groundwork. I've been watching online tutorials to understand basic music theory and finger positioning. However, I recognize that to progress seriously, I'll need structured lessons from a qualified instructor. I'm planning to enroll in weekly classes starting next month. I've also downloaded several practice apps that gamify learning, which should make daily practice more engaging. My goal is to dedicate at least 30 minutes every day to practice, gradually building up my skills.</p>
+                            
+                            <p>The benefits of learning piano would be substantial. On a personal level, it would provide a creative outlet and a way to relax after stressful days. Music has always been therapeutic for me, and creating it myself would be even more rewarding. Professionally, the discipline and perseverance required to master an instrument would undoubtedly benefit my career.</p>
+                        </div>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+        <div id="part3Modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Part 3: Discussion</h2>
+                    <button class="close-btn" onclick="closeModal('part3Modal')">×</button>
+                </div>
+                <div class="part-section">
+                    <p style="color: #ccc;">This section is under construction. It will contain follow-up discussion questions related to the Part 2 topics.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="vocabModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>📚 Vocabulary Bank</h2>
+                    <button class="close-btn" onclick="closeModal('vocabModal')">×</button>
+                </div>
+                
+                <div class="tabs">
+                    <div class="tab active" onclick="switchTab(this, 'vocabContent1')">Topic: Art & Creativity</div>
+                    <div class="tab" onclick="switchTab(this, 'vocabContent2')">Topic: Technology</div>
+                    <div class="tab" onclick="switchTab(this, 'vocabContent3')">Topic: Environment</div>
+                </div>
+
+                <div id="vocabContent1" class="tab-content">
+                    <div class="vocab-category">
+                        <div class="vocab-title">Expressing Creative Ideas</div>
+                        <div class="vocab-item">
+                            <div class="vocab-word">Meticulous (adj)</div>
+                            <div class="vocab-meaning">Showing great attention to detail; very careful and precise.</div>
+                        </div>
+                        <div class="vocab-item">
+                            <div class="vocab-word">Avant-garde (adj)</div>
+                            <div class="vocab-meaning">New and experimental ideas and methods in art, music, or literature.</div>
+                        </div>
+                        <div class="vocab-item">
+                            <div class="vocab-word">Intricate (adj)</div>
+                            <div class="vocab-meaning">Very complicated or detailed.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="vocabContent2" class="tab-content hidden">
+                    <div class="vocab-category">
+                        <div class="vocab-title">Digital World</div>
+                        <div class="vocab-item">
+                            <div class="vocab-word">Cutting-edge (adj)</div>
+                            <div class="vocab-meaning">Highly advanced or innovative.</div>
+                        </div>
+                        <div class="vocab-item">
+                            <div class="vocab-word">Ubiquitous (adj)</div>
+                            <div class="vocab-meaning">Present, appearing, or found everywhere.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="vocabContent3" class="tab-content hidden">
+                    <div class="vocab-category">
+                        <div class="vocab-title">Environmental Issues</div>
+                        <div class="vocab-item">
+                            <div class="vocab-word">Sustainable (adj)</div>
+                            <div class="vocab-meaning">Able to be maintained at a certain rate or level.</div>
+                        </div>
+                        <div class="vocab-item">
+                            <div class="vocab-word">Biodiversity (n)</div>
+                            <div class="vocab-meaning">The variety of life in the world or in a particular habitat or ecosystem.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="exercisesModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>✍️ Speaking Exercises</h2>
+                    <button class="close-btn" onclick="closeModal('exercisesModal')">×</button>
+                </div>
+                <div class="exercise-section">
+                    <div class="exercise-question">
+                        Complete the sentence using the most appropriate cohesive device: "I enjoy painting landscapes, ___________ I sometimes find abstract art confusing."
+                    </div>
+                    <div class="options">
+                        <div class="option" onclick="checkAnswer(this, false)">A. Moreover</div>
+                        <div class="option" onclick="checkAnswer(this, true)">B. However</div>
+                        <div class="option" onclick="checkAnswer(this, false)">C. Therefore</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="timerModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>⏱️ Timed Practice</h2>
+                    <button class="close-btn" onclick="closeModal('timerModal')">×</button>
+                </div>
+                <div class="timer" id="countdownTimer">02:00</div>
+                <button class="cta-button" id="timerButton" onclick="startTimer()">Start 2-Minute Speech</button>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <div class="nav-item active" onclick="showPage('homePage', this)">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </div>
+            <div class="nav-item" onclick="openModal('vocabModal'); this.classList.add('active');">
+                <span class="nav-icon">📚</span>
+                <span class="nav-label">Vocab</span>
+            </div>
+            <div class="nav-item" onclick="openModal('timerModal'); this.classList.add('active');">
+                <span class="nav-icon">⏱️</span>
+                <span class="nav-label">Timer</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label">Profile</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- Modal Control Functions ---
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            // Deactivate all nav-items when a modal is opened
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            // Re-activate the Home nav item
+            document.querySelector('.nav-item').classList.add('active');
+        }
+
+        // --- Content Toggling (For Sample Answers) ---
+        function toggleAnswer(element) {
+            const answer = element.querySelector('.sample-answer');
+            answer.classList.toggle('show');
+            element.classList.toggle('active'); // Optional: for styling the active question-item
+        }
+
+        // --- Tab Switching (e.g., in Vocabulary Modal) ---
+        function switchTab(clickedTab, contentId) {
+            // 1. Deactivate all tabs and hide all content
+            const parentModal = clickedTab.closest('.modal-content');
+            const tabs = parentModal.querySelectorAll('.tab');
+            const contents = parentModal.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // 2. Activate the clicked tab and show its content
+            clickedTab.classList.add('active');
+            document.getElementById(contentId).classList.remove('hidden');
+        }
+
+        // --- Exercise Answer Checking (Example) ---
+        function checkAnswer(selectedOption, isCorrect) {
+            // Prevent re-checking
+            if (selectedOption.parentNode.querySelector('.correct, .wrong')) return;
+
+            if (isCorrect) {
+                selectedOption.classList.add('correct');
+            } else {
+                selectedOption.classList.add('wrong');
+                // Optional: find and highlight the correct answer
+                selectedOption.parentNode.querySelector('.option[onclick*="true"]').classList.add('correct');
+            }
+        }
+
+        // --- Timer Functionality (Example) ---
+        let timerInterval;
+        let timeRemaining = 120; // 2 minutes in seconds
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            document.getElementById('countdownTimer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function startTimer() {
+            const button = document.getElementById('timerButton');
+            const timerDisplay = document.getElementById('countdownTimer');
+
+            if (timerInterval) {
+                // Pause logic
+                clearInterval(timerInterval);
+                timerInterval = null;
+                button.textContent = 'Continue Practice';
+                button.style.background = 'linear-gradient(135deg, #FF9800, #FFB74D)'; // Orange for 'Continue'
+            } else {
+                // Start/Resume logic
+                if (timeRemaining <= 0) {
+                    timeRemaining = 120; // Reset if expired
+                }
+                
+                button.textContent = 'Pause Timer';
+                button.style.background = '#ff1744'; // Red for 'Pause'
+                timerDisplay.style.color = '#ff1744'; // Reset color
+
+                timerInterval = setInterval(() => {
+                    timeRemaining--;
+                    updateTimerDisplay();
+
+                    if (timeRemaining <= 10 && timeRemaining > 0) {
+                        timerDisplay.style.color = '#FF9800'; // Yellow/Orange warning
+                    }
+
+                    if (timeRemaining <= 0) {
+                        clearInterval(timerInterval);
+                        timerInterval = null;
+                        timerDisplay.textContent = 'Time Up!';
+                        timerDisplay.style.color = '#ff1744';
+                        button.textContent = 'Start New Practice';
+                        button.style.background = 'linear-gradient(135deg, #ff1744, #ff5252)';
+                    }
+                }, 1000);
+            }
+        }
+
+        // Initial timer display setup
+        updateTimerDisplay();
+
+        // --- Section Collapse/Expand (Example: Practice Sessions) ---
+        document.getElementById('practiceHeader').addEventListener('click', function() {
+            const grid = document.getElementById('practiceGrid');
+            const arrow = document.getElementById('practiceArrow');
+            if (grid.style.display === 'none') {
+                grid.style.display = 'grid';
+                arrow.classList.remove('rotated');
+            } else {
+                grid.style.display = 'none';
+                arrow.classList.add('rotated');
+            }
+        });
+
+        // --- Navigation Bar Functionality (Simple for a single-page structure) ---
+        function showPage(pageId, navItem) {
+            // Close any open modals
+            document.querySelectorAll('.modal').forEach(modal => modal.classList.remove('active'));
+
+            // Set active nav item
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            navItem.classList.add('active');
+        }
+        
+    </script>
+</body>
+</html>
