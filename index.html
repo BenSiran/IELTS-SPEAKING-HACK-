@@ -42,7 +42,7 @@
             gap: 10px;
         }
 
-        /* 1. LOGO IMAGE CSS */
+        /* LOGO IMAGE CSS */
         .logo-img {
             width: 30px; 
             height: 30px;
@@ -59,8 +59,8 @@
             text-align: center;
             padding: 40px 20px;
             
-            /* 2. HERO BACKGROUND IMAGE CSS: REPLACE THIS URL */
-            background-image: url('[https://photos.app.goo.gl/nGaNAjL7bPA6oEuN8]'); 
+            /* 🔥 BACKGROUND IMAGE UPDATED with Terabox link 🔥 */
+            background-image: url('https://1024terabox.com/s/1bp0EfHSy1HyRrmbF3YhkGg'); 
             background-size: cover; 
             background-position: center;
             background-color: #0f0f0f; /* Fallback color */
@@ -105,6 +105,655 @@
             left: 0;
             background: transparent;
         }
+
+        .mic-icon::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 15px;
+            background: #fff;
+            bottom: -50px;
+            left: 28px;
+        }
+
+        .mic-bars {
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            top: 45px;
+        }
+
+        .bar {
+            width: 3px;
+            height: 15px;
+            background: #000;
+            border-radius: 2px;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
+        }
+
+        .hero-title .hack {
+            color: #ff1744;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            background: #262626;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .arrow.rotated {
+            transform: rotate(180deg);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #222;
+            border-color: #ff1744;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff1744;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .progress-section {
+            background: #262626;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff1744, #ff5252);
+            width: 65%;
+            transition: width 0.3s;
+        }
+
+        .cta-button {
+            width: 100%;
+            background: linear-gradient(135deg, #ff1744, #ff5252);
+            border: none;
+            border-radius: 50px;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            background: #000;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: 1px solid #333;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.2s;
+            flex: 1;
+            padding: 5px;
+        }
+
+        .nav-item.active {
+            color: #ff1744;
+        }
+
+        .nav-icon {
+            font-size: 24px;
+        }
+
+        .nav-label {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ff1744;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #ff1744;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .part-section {
+            background: #262626;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .part-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff1744;
+            margin-bottom: 10px;
+        }
+
+        .question-item {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .question-item:hover {
+            background: #222;
+        }
+
+        .question-text {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .sample-answer {
+            display: none;
+            background: #0f0f0f;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+            border-left: 3px solid #ff1744;
+        }
+
+        .sample-answer.show {
+            display: block;
+        }
+
+        .sample-label {
+            color: #ff1744;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .vocab-category {
+            background: #262626;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .vocab-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff1744;
+            margin-bottom: 15px;
+        }
+
+        .vocab-item {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 8px;
+        }
+
+        .vocab-word {
+            font-weight: 600;
+            color: #ff5252;
+            margin-bottom: 5px;
+        }
+
+        .vocab-meaning {
+            font-size: 13px;
+            color: #ccc;
+        }
+
+        .exercise-section {
+            background: #262626;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .exercise-question {
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .option:hover {
+            background: #222;
+        }
+
+        .option.correct {
+            border-color: #4caf50;
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .option.wrong {
+            border-color: #f44336;
+            background: rgba(244, 67, 54, 0.1);
+        }
+
+        .timer {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ff1744;
+            margin: 30px 0;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: #262626;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .tab.active {
+            background: #ff1744;
+            border-color: #ff1744;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://1024terabox.com/s/1euPgVLvl6LThmfJcmdp4Mg" alt="Ben Siran Academy Logo" class="logo-img">
+                <span class="logo-text">Ben Siran Academy</span>
+            </div>
+        </div>
+
+        <div id="homePage">
+            <div class="hero">
+                <div class="mic-circle">
+                    <div class="mic-icon">
+                        <div class="mic-bars">
+                            <div class="bar" style="height: 10px;"></div>
+                            <div class="bar" style="height: 18px;"></div>
+                            <div class="bar" style="height: 14px;"></div>
+                            <div class="bar" style="height: 20px;"></div>
+                            <div class="bar" style="height: 12px;"></div>
+                            <div class="bar" style="height: 16px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="hero-title">IELTS SPEAKING <span class="hack">HACK</span></h1>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <div class="section-header" id="practiceHeader">
+                        <h2 class="section-title">Practice Sessions</h2>
+                        <span class="arrow" id="practiceArrow">▼</span>
+                    </div>
+                    <div class="grid" id="practiceGrid">
+                        <div class="card" onclick="openModal('part1Modal')">
+                            <div class="card-icon">📖</div>
+                            <div class="card-title">Part 1<br>Sessions</div>
+                            <div class="badge">12</div>
+                        </div>
+                        <div class="card" onclick="openModal('part2Modal')">
+                            <div class="card-icon">🎤</div>
+                            <div class="card-title">Part 2<br>Sessions</div>
+                            <div class="badge">8</div>
+                        </div>
+                        <div class="card" onclick="openModal('part3Modal')">
+                            <div class="card-icon">💬</div>
+                            <div class="card-title">Part 3<br>Sessions</div>
+                            <div class="badge">10</div>
+                        </div>
+                        <div class="card" onclick="openModal('vocabModal')">
+                            <div class="card-icon">📚</div>
+                            <div class="card-title">Vocabulary<br>Bank</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <div class="section-header" id="progressHeader">
+                        <h2 class="section-title">Progress Tracker</h2>
+                        <span class="arrow" id="progressArrow">▼</span>
+                    </div>
+                    <div id="progressContent">
+                        <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+                            <span style="font-size: 14px; color: #888;">Sessions Complete</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #ff1744;">19/30</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">Quick Practice</h2>
+                    </div>
+                    <div class="grid">
+                        <div class="card" onclick="openModal('exercisesModal')">
+                            <div class="card-icon">✍️</div>
+                            <div class="card-title">Speaking<br>Exercises</div>
+                        </div>
+                        <div class="card" onclick="openModal('timerModal')">
+                            <div class="card-icon">⏱️</div>
+                            <div class="card-title">Timed<br>Practice</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="cta-button" onclick="window.location.href='T.me/bensiranacademy'">
+                    ENROLL Now
+                </button>
+            </div>
+        </div>
+
+        <div id="part1Modal" class="modal">...</div> 
+        <div id="part2Modal" class="modal">...</div>
+        <div id="part3Modal" class="modal">...</div>
+        <div id="vocabModal" class="modal">...</div>
+        <div id="exercisesModal" class="modal">...</div>
+        <div id="timerModal" class="modal">...</div>
+
+        <div class="nav-bar">...</div>
+
+    </div>
+
+    <script>
+        // --- Modal Control Functions ---
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            // Deactivate all nav-items when a modal is opened
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            // Re-activate the Home nav item
+            document.querySelector('.nav-item').classList.add('active');
+        }
+
+        // --- Content Toggling (For Sample Answers) ---
+        function toggleAnswer(element) {
+            const answer = element.querySelector('.sample-answer');
+            answer.classList.toggle('show');
+            element.classList.toggle('active'); // Optional: for styling the active question-item
+        }
+
+        // --- Tab Switching (e.g., in Vocabulary Modal) ---
+        function switchTab(clickedTab, contentId) {
+            // 1. Deactivate all tabs and hide all content
+            const parentModal = clickedTab.closest('.modal-content');
+            const tabs = parentModal.querySelectorAll('.tab');
+            const contents = parentModal.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // 2. Activate the clicked tab and show its content
+            clickedTab.classList.add('active');
+            document.getElementById(contentId).classList.remove('hidden');
+        }
+
+        // --- Exercise Answer Checking (Example) ---
+        function checkAnswer(selectedOption, isCorrect) {
+            // Prevent re-checking
+            if (selectedOption.parentNode.querySelector('.correct, .wrong')) return;
+
+            if (isCorrect) {
+                selectedOption.classList.add('correct');
+            } else {
+                selectedOption.classList.add('wrong');
+                // Optional: find and highlight the correct answer
+                selectedOption.parentNode.querySelector('.option[onclick*="true"]').classList.add('correct');
+            }
+        }
+
+        // --- Timer Functionality (Example) ---
+        let timerInterval;
+        let timeRemaining = 120; // 2 minutes in seconds
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            document.getElementById('countdownTimer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function startTimer() {
+            const button = document.getElementById('timerButton');
+            const timerDisplay = document.getElementById('countdownTimer');
+
+            if (timerInterval) {
+                // Pause logic
+                clearInterval(timerInterval);
+                timerInterval = null;
+                button.textContent = 'Continue Practice';
+                button.style.background = 'linear-gradient(135deg, #FF9800, #FFB74D)'; // Orange for 'Continue'
+            } else {
+                // Start/Resume logic
+                if (timeRemaining <= 0) {
+                    timeRemaining = 120; // Reset if expired
+                }
+                
+                button.textContent = 'Pause Timer';
+                button.style.background = '#ff1744'; // Red for 'Pause'
+                timerDisplay.style.color = '#ff1744'; // Reset color
+
+                timerInterval = setInterval(() => {
+                    timeRemaining--;
+                    updateTimerDisplay();
+
+                    if (timeRemaining <= 10 && timeRemaining > 0) {
+                        timerDisplay.style.color = '#FF9800'; // Yellow/Orange warning
+                    }
+
+                    if (timeRemaining <= 0) {
+                        clearInterval(timerInterval);
+                        timerInterval = null;
+                        timerDisplay.textContent = 'Time Up!';
+                        timerDisplay.style.color = '#ff1744';
+                        button.textContent = 'Start New Practice';
+                        button.style.background = 'linear-gradient(135deg, #ff1744, #ff5252)';
+                    }
+                }, 1000);
+            }
+        }
+
+        // Initial timer display setup
+        updateTimerDisplay();
+
+        // --- Section Collapse/Expand (Example: Practice Sessions) ---
+        document.getElementById('practiceHeader').addEventListener('click', function() {
+            const grid = document.getElementById('practiceGrid');
+            const arrow = document.getElementById('practiceArrow');
+            if (grid.style.display === 'none') {
+                grid.style.display = 'grid';
+                arrow.classList.remove('rotated');
+            } else {
+                grid.style.display = 'none';
+                arrow.classList.add('rotated');
+            }
+        });
+
+        // --- Navigation Bar Functionality (Simple for a single-page structure) ---
+        function showPage(pageId, navItem) {
+            // Close any open modals
+            document.querySelectorAll('.modal').forEach(modal => modal.classList.remove('active'));
+
+            // Set active nav item
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            navItem.classList.add('active');
+        }
+        
+    </script>
+</body>
+</html>
 
         .mic-icon::after {
             content: '';
